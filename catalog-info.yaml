@@ -9,29 +9,3 @@ spec:
   type: "documentation"
   lifecycle: "production"
   owner: "it"
----
-apiVersion: "backstage.io/v1alpha1"
-kind: "Group"
-metadata:
-  name: "security_champion_qmsrelease"
-  title: "Security Champion qmsrelease"
-spec:
-  type: "security_champion"
-  parent: "it_security_champions"
-  members:
-  - "mortenaatkartverket"
-  children:
-  - "resource:qmsrelease"
----
-apiVersion: "backstage.io/v1alpha1"
-kind: "Resource"
-metadata:
-  name: "qmsrelease"
-  links:
-  - url: "https://github.com/kartverket/qmsrelease"
-    title: "qmsrelease på GitHub"
-spec:
-  type: "repo"
-  owner: "security_champion_qmsrelease"
-  dependencyOf:
-  - "component:qmsrelease"
